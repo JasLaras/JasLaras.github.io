@@ -1,0 +1,108 @@
+body {
+    font-family: 'Bungee', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox to arrange content vertically */
+    flex-direction: column; /* Arrange content from top to bottom */
+    min-height: 100vh; /* Ensure body takes at least the height of the viewport */
+}
+
+header {
+    position: relative;
+    background-color: transparent; /* Remove background color */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    animation: aurora 8s infinite alternate; /* Add animation for aurora borealis effect */
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 5rem;
+    background-image: linear-gradient(to right, #333, #333, #333, #333, #333, #333);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@keyframes aurora {
+    0% {
+        background-color: #dab1b1; 
+    }
+    25% {
+        background-color: #b9b0da; 
+    }
+    50% {
+        background-color: #cdf3cd; 
+    }
+    75% {
+        background-color: #b9b0da; 
+    }
+    100% {
+        background-color: #dab1b1; 
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    flex-grow: 1; 
+}
+
+.tile {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: bob 2s infinite alternate;
+}
+
+@keyframes bob {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
+
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-container {
+    text-align: center; /* Center align all content within the game container */
+    margin-bottom: 20px;
+}
+
+.game {
+    display: inline-block; /* Make each game container inline-block to create the bubble effect */
+    border: 2px solid #333; /* Add border to create the bubble effect */
+    border-radius: 10px; /* Add border-radius to make it round */
+    padding: 10px; /* Add padding inside the bubble */
+    margin: 0 10px; /* Add space between game containers */
+}
+
+.game-container h2 {
+    margin: 0; /* Remove default margin */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%; 
+}

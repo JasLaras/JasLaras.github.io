@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+  
+canvas {
+    border: 1px solid white;
+}
+
+.hidden {
+    display: none;
+}
+  
+#game-container {
+    position: relative;
+}
+
+#start-message,
+#win-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+}
+  
+#play-button,
+#play-again-button {
+    padding: 20px 40px;
+    font-size: 30px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+}
+
+  

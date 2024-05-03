@@ -98,6 +98,7 @@ main {
 .game-container h2 {
     margin: 0; /* Remove default margin */
     font-size: 25px;
+    text-align: center;
 }
 
 footer {

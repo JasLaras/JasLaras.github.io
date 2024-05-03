@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe679;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    background-color: #a5d9ee;
+    border-radius: 50px; /* Adjust the border radius as needed */
+    padding: 20px 40px; /* Adjust the padding as needed */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    font-size: 45px;
+    display: inline-block; /* Ensures the bubble size fits the content */
+}
+
+.game-area {
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #eff2f3;
+}
+
+.scoreboard {
+    margin-bottom: 200px;
+}
+
+.scoreboard p {
+    margin: 0;
+    font-size: 24px; /* Adjust the font size for the labels */
+}
+
+.scoreboard span {
+    font-weight: bold;
+    font-size: 36px; /* Adjust the font size for the scores */
+}
+
+.play-area {
+    display: flex;
+    justify-content: center;
+}
+
+.play-area button {
+    padding: 15px 30px;
+    font-size: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #a5d9ee;
+    border-radius: 50px; /* Adjust the border radius as needed */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}

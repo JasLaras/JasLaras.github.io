@@ -6,6 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: black;
+    font-family: 'Kanit', sans-serif;
 }
   
 canvas {
@@ -21,7 +22,8 @@ canvas {
 }
 
 #start-message,
-#win-message {
+#win-message,
+#game-over-message { 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -29,10 +31,17 @@ canvas {
     text-align: center;
     color: white;
     border-radius: 20px;
+    font-size: 50px;
+    font-family: 'Kanit', sans-serif;
+}
+
+#win-message h1 { /* Style for "You Win!" text */
+    color: rgb(233, 94, 233);
 }
   
 #play-button,
-#play-again-button {
+#play-again-button,
+#play-again-button-game-over { 
     padding: 20px 40px;
     font-size: 30px;
     background-color: #4caf50;
@@ -41,6 +50,8 @@ canvas {
     cursor: pointer;
     color: white;
     margin-top: 20px;
+    font-size: 40px;
+    font-family: 'Kanit', sans-serif;
 }
 
   

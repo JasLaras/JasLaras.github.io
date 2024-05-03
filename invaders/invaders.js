@@ -4,6 +4,8 @@ const playButton = document.getElementById('play-button');
 const gameContainer = document.getElementById('game-container');
 const winMessage = document.getElementById('win-message');
 const playAgainButton = document.getElementById('play-again-button');
+const gameOverMessage = document.getElementById('game-over-message');
+const playAgainButtonGameOver = document.getElementById('play-again-button-game-over');
 
 // Get the canvas element
 const canvas = document.getElementById('game-canvas');
@@ -57,6 +59,12 @@ playAgainButton.addEventListener('click', () => {
   winMessage.classList.add('hidden'); // Hide the win message
   gameContainer.classList.remove('hidden'); // Show the game container
   initGame(); // Start the game again
+});
+
+playAgainButtonGameOver.addEventListener('click', () => {
+    gameOverMessage.classList.add('hidden'); // Hide the game over message
+    gameContainer.classList.remove('hidden'); // Show the game container
+    initGame(); // Start the game again
 });
 
 // Game loop
@@ -128,9 +136,8 @@ function gameLoop() {
     winMessage.classList.remove('hidden'); // Show win message
     clearInterval(gameInterval); // Pause the game loop
   } else if (invaders.some(invader => invader.y + invaderHeight >= playerY)) {
-    alert('Game over!');
+    gameOverMessage.classList.remove('hidden'); // Show game over message
     clearInterval(gameInterval); // Pause the game loop
-    // Add a "Play Again" button or prompt the user to press a key to start a new game
   }
 }
 

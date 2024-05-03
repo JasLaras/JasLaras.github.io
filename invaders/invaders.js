@@ -67,6 +67,19 @@ playAgainButtonGameOver.addEventListener('click', () => {
     initGame(); // Start the game again
 });
 
+document.addEventListener('keydown', event => {
+  if (event.key === 'Enter') {
+    // Check if the game is in start state or game over state
+    if (!gameContainer.classList.contains('hidden') && startMessage.classList.contains('hidden')) {
+      // If game is ongoing, simulate click on play again button
+      playAgainButton.click();
+    } else {
+      // If game is not ongoing, simulate click on play button
+      playButton.click();
+    }
+  }
+});
+
 // Game loop
 function gameLoop() {
   // Clear the canvas

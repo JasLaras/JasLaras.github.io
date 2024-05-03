@@ -12,7 +12,7 @@ header {
     background-color: transparent; /* Remove background color */
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     animation: aurora 8s infinite alternate; /* Add animation for aurora borealis effect */
 }
 
@@ -97,6 +97,7 @@ main {
 
 .game-container h2 {
     margin: 0; /* Remove default margin */
+    font-size: 25px;
 }
 
 footer {

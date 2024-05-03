@@ -16,11 +16,10 @@ body {
 h1 {
     color: #333;
     background-color: #a5d9ee;
-    border-radius: 50px; 
-    padding: 20px 40px; 
+    border-radius: 50px; /* Adjust the border radius as needed */
+    padding: 20px 40px; /* Adjust the padding as needed */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    font-size: 45px;
-    display: inline-block; 
+    display: inline-block; /* Ensures the bubble size fits the content */
 }
 
 .game-area {
@@ -36,12 +35,12 @@ h1 {
 
 .scoreboard p {
     margin: 0;
-    font-size: 24px; 
+    font-size: 24px; /* Adjust the font size for the labels */
 }
 
 .scoreboard span {
     font-weight: bold;
-    font-size: 36px; 
+    font-size: 36px; /* Adjust the font size for the scores */
 }
 
 .play-area {
@@ -55,7 +54,7 @@ h1 {
     margin: 0 10px;
     cursor: pointer;
     background-color: #a5d9ee;
-    border-radius: 50px; 
+    border-radius: 50px; /* Adjust the border radius as needed */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 

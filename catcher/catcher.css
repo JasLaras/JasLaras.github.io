@@ -13,9 +13,8 @@ body {
 }
 
 #basket {
-    width: 100px;
-    height: 50px;
-    background-color: #8b4513;
+    width: 200px;
+    height: 200px;
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -23,26 +22,16 @@ body {
 }
 
 .fruit {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     position: absolute;
 }
 
-/* Specific fruit colors */
-.red {
-    background-color: red;
+.fruit-counter {
+    font-family: 'Pacifico', cursive;
+    font-size: 45px;
+    color: rgb(139, 60, 60);
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
-
-.banana {
-    background-color: yellow;
-}
-
-.orange {
-    background-color: orange;
-}
-
-.grape {
-    background-color: purple;
-}
-
-/*Fruit Images: https://clipart-library.com/ */

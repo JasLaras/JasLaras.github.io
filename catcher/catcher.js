@@ -1,11 +1,8 @@
 const gameContainer = document.getElementById('game-container');
 const basket = document.getElementById('basket');
-const fruitCounter = document.createElement('div');
-fruitCounter.classList.add('fruit-counter');
-fruitCounter.textContent = 'Fruits Collected: 0';
-gameContainer.appendChild(fruitCounter);
+const counterSpan = document.getElementById('counter'); // Reference to the span element inside the counter div
 
-let basketX = 50; // In pixels
+let basketX = (gameContainer.offsetWidth - basket.offsetWidth) / 2; 
 let basketSpeed = 20; // Increased basket speed
 let fruitsCollected = 0;
 
@@ -17,7 +14,7 @@ document.addEventListener('keydown', (event) => {
         }
     } else if (event.key === 'ArrowRight') {
         const newX = basketX + basketSpeed;
-        const maxBasketX = gameContainer.offsetWidth - basket.offsetWidth; // In pixels
+        const maxBasketX = gameContainer.offsetWidth - basket.offsetWidth; 
         if (newX <= maxBasketX) {
           basketX = newX;
         }
@@ -26,23 +23,26 @@ document.addEventListener('keydown', (event) => {
     basket.style.left = `${basketX}px`; // Set position in pixels
 });
 
+function updateCounter() {
+    counterSpan.textContent = fruitsCollected; // Update  counter text with current fruits collected count
+}
+
 function spawnFruit() {
-    const fruit = document.createElement('div');
+    const fruit = document.createElement('img');
     fruit.classList.add('fruit');
 
-    // Assign specific class based on fruit type
-    const fruitTypes = ['banana', 'orange', 'grape', 'red']; // Include red as a fruit type
-    const randomFruitType = fruitTypes[Math.floor(Math.random() * fruitTypes.length)];
-    fruit.classList.add(randomFruitType);
+    const fruitImages = ['banana.png', 'orange.png', 'grape.png', 'apple.png']; 
+    const randomFruitImage = fruitImages[Math.floor(Math.random() * fruitImages.length)];
+    fruit.src = randomFruitImage;
 
-    let fruitX = Math.random() * (gameContainer.offsetWidth - 50); // In pixels
-    fruit.style.left = `${fruitX}px`; // Set position in pixels
+    let fruitX = Math.random() * (gameContainer.offsetWidth - 50);
+    fruit.style.left = `${fruitX}px`; 
     fruit.style.top = '0';
     fruit.style.position = 'absolute';
     gameContainer.appendChild(fruit);
   
     let fruitY = 0;
-    const fruitSpeed = 5; // Increased fruit falling speed
+    const fruitSpeed = 5; 
   
     function moveFruit() {
         fruitY += fruitSpeed;
@@ -72,7 +72,7 @@ function spawnFruit() {
             clearInterval(fruitInterval);
             gameContainer.removeChild(fruit);
             fruitsCollected++;
-            fruitCounter.textContent = `Fruits Collected: ${fruitsCollected}`;
+            updateCounter(); // Update counter when fruit is collected
         }
     }
   

@@ -2,18 +2,18 @@ body {
     font-family: 'Bungee', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex; /* Use flexbox to arrange content vertically */
-    flex-direction: column; /* Arrange content from top to bottom */
-    min-height: 100vh; /* Ensure body takes at least the height of the viewport */
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
 }
 
 header {
     position: relative;
-    background-color: transparent; /* Remove background color */
+    background-color: transparent; 
     color: white;
     text-align: center;
     padding: 30px;
-    animation: aurora 8s infinite alternate; /* Add animation for aurora borealis effect */
+    animation: aurora 8s infinite alternate; 
 }
 
 header h1 {
@@ -82,23 +82,43 @@ main {
     object-fit: cover;
 }
 
-.game-container {
-    text-align: center; /* Center align all content within the game container */
-    margin-bottom: 20px;
+.game-bubble {
+    border-radius: 10px; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 300px; 
+    margin: 0 auto; 
 }
 
-.game {
-    display: inline-block; /* Make each game container inline-block to create the bubble effect */
-    border: 2px solid #333; /* Add border to create the bubble effect */
-    border-radius: 10px; /* Add border-radius to make it round */
-    padding: 10px; /* Add padding inside the bubble */
-    margin: 0 10px; /* Add space between game containers */
+.game-container {
+    text-align: center;
 }
 
 .game-container h2 {
-    margin: 0; /* Remove default margin */
-    font-size: 25px;
-    text-align: center;
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.tile img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.tile {
+    display: inline-block;
+    cursor: pointer; 
+}
+
+.about {
+    margin-top: 10px; 
+    text-align: center; 
+    font-size: 15px;
+}
+
+
+.about {
+    margin-top: 10px; 
 }
 
 footer {
@@ -107,4 +127,6 @@ footer {
     text-align: center;
     padding: 20px;
     width: 100%; 
+    font-size: 15px;
+    text-decoration: none;
 }

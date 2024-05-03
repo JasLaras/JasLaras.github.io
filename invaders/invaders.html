@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Space Invaders</title>
   <link rel="stylesheet" type="text/css" href="invaders.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
 </head>
 <body>
-  <div id="game-container">
-    <canvas id="game-canvas"></canvas>
+  <div id="game-container" aria-label="Space Invaders Game">
+    <canvas id="game-canvas" aria-label="Canvas for Space Invaders Game"></canvas>
   </div>
-  <div id="win-message" class="hidden">
+  <div id="win-message" class="hidden" aria-hidden="true">
     <h1>You Win!</h1>
-    <button id="play-again-button">Play Again</button>
+    <button id="play-again-button" aria-label="Play Again">Play Again</button>
   </div>
-  <div id="game-over-message" class="hidden">
+  <div id="game-over-message" class="hidden" aria-hidden="true">
     <h1>Game Over</h1>
-    <button id="play-again-button-game-over">Play Again</button>
+    <button id="play-again-button-game-over" aria-label="Play Again">Play Again</button>
   </div>
   <div id="start-message">
-    <button id="play-button">Play</button>
+    <h1>Space Invaders</h1>
+    <button id="play-button" aria-label="Start Game">Play</button>
   </div>
-  <script src="invaders.js"></script>
+  <script src="invaders.js" aria-label="Game functionality"></script>
 </body>
 </html>
+
 

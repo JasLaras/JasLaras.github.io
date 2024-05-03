@@ -35,7 +35,7 @@ canvas {
     font-family: 'Kanit', sans-serif;
 }
 
-#win-message h1 { /* Style for "You Win!" text */
+h1 {
     color: rgb(233, 94, 233);
 }
   
